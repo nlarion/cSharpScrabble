@@ -11,8 +11,14 @@ namespace FindReplaceTestNS
     public void Find_And_Replace_Test()
     {
       FindReplace test = new FindReplace("hello world", "world", "universe");
-
       Assert.Equal("hello universe", test.ReplaceWord());
+    }
+
+    [Fact]
+    public void Find_And_Replace_Whole_phrase()
+    {
+      FindReplace test2 = new FindReplace("hello world", "hello world", "universe");
+      Assert.Equal("universe", test2.ReplaceWord());
     }
 
 
