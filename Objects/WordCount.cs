@@ -19,9 +19,14 @@ namespace FindReplaceNS.Objects
 
         public string ReplaceWord()
         {
-
-         string result = _phrase.Replace(_wordToReplace, _newWord);
+         string newPhrase = _phrase.ToLower();
+         string result = newPhrase.Replace(_wordToReplace, _newWord);
          return result;
+        }
+
+        public int CountWord()
+        {
+         return 0;
         }
   }
 }
