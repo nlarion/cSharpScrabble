@@ -17,9 +17,11 @@ namespace FindReplaceNS.Objects
           _newWord = newWord;
         }
 
-        public static string ReplaceWord()
+        public string ReplaceWord()
         {
-         return "failure";
+
+         string result = _phrase.Replace(_wordToReplace, _newWord);
+         return result;
         }
   }
 }

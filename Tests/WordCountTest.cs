@@ -10,9 +10,9 @@ namespace FindReplaceTestNS
     [Fact]
     public void Find_And_Replace_Test()
     {
-      FindReplace testReplace = new FindReplace("hello world", "world", "universe");
+      FindReplace test = new FindReplace("hello world", "world", "universe");
 
-      Assert.Equal("hello universe", FindReplace.ReplaceWord());
+      Assert.Equal("hello universe", test.ReplaceWord());
     }
 
 
