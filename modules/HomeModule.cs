@@ -12,12 +12,12 @@ namespace FindReplaceNMS
       {
         return View["index.cshtml"];
       };
-      Post["/enterInputs"]= _ =>
+      Post["/"]= _ =>
       {
         FindReplace newPhrase = new FindReplace(Request.Form["phrase"],
         Request.Form["wordToReplace"],
         Request.Form["newWord"]);
-        return View["outputs.cshtml", newPhrase];
+        return View["index.cshtml", newPhrase];
       };
     }
   }

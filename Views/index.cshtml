@@ -9,12 +9,26 @@
     <div class="container">
       <h1>Enter your phrase and the word you'd like to search that phrase for</h1>
 
-      <form action="/enterInputs" method="post">
+      <form action="/" method="post">
         <input name = "phrase" placeholder = "Phrase"></input>
         <input name = "wordToReplace" placeholder = "Single Word"></input>
         <input name = "newWord" placeholder = "Single Word"></input>
         <button>How many times does my word appear?</button>
       </form>
+
+      @{
+        if(@Model != null)
+        {
+          <p> @Model.ReplaceWord()</p>
+          <p>If you want to replace only the whole words, here is your output</p>
+          <p>@Model.WholeWordsOnly()</p>
+
+          <p>the word @Model.GetWordToReplace() was replaced @Model.CountWord() times</p>
+
+        }
+      }
+
+
     </div>
   </body>
 </html>
