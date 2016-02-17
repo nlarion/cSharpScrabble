@@ -18,7 +18,13 @@ namespace PalindromeNS.Objects
         public string Reverse()
         {
           string inversePhrase;
-          return "failure";
+
+          char[] phraseArray = _phrase.ToCharArray();
+          var reverse = phraseArray.Reverse();
+
+          inversePhrase = string.Join("", reverse);
+          Console.WriteLine(inversePhrase);
+          return inversePhrase;
         }
 
 
