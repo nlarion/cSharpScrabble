@@ -1,21 +1,20 @@
 using Xunit;
-using WordCountNS.Objects;
+using FindReplaceNS.Objects;
 using System.Collections.Generic;
 using System;
 
-namespace WordCountTestNS
+namespace FindReplaceTestNS
 {
-  public class WordCount
+  public class FindAndReplaceTest
   {
     [Fact]
-    public void Check_Double_Word()
+    public void Find_And_Replace_Test()
     {
-      Assert.Equal(2, WordCounter.RepeatCounter("hey", "hey hey"));
+      FindReplace testReplace = new FindReplace("hello world", "world", "universe");
+
+      Assert.Equal("hello universe", FindReplace.ReplaceWord());
     }
-    [Fact]
-    public void Check_Single_Word()
-    {
-      Assert.Equal(1, WordCounter.RepeatCounter("hey", "hey"));
-    }
+
+
   }
 }
