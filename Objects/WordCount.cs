@@ -36,5 +36,10 @@ namespace FindReplaceNS.Objects
 
          return times;
         }
+
+        public string WholeWordsOnly()
+        {
+          return "failure";
+        }
   }
 }

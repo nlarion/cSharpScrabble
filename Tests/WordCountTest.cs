@@ -22,13 +22,6 @@ namespace FindReplaceTestNS
     }
 
     [Fact]
-    public void Find_And_Replace_Words_Within_Words()
-    {
-      FindReplace test3 = new FindReplace("catdog", "cat", "wolf");
-      Assert.Equal("wolfdog", test3.ReplaceWord());
-    }
-
-    [Fact]
     public void Find_And_Replace_Words_Within_Words_With_Capitals()
     {
       FindReplace test3 = new FindReplace("Catdog", "cat", "wolf");
@@ -38,9 +31,17 @@ namespace FindReplaceTestNS
     [Fact]
     public void Find_Number_Of_Times_Word_Exists()
     {
-      FindReplace test3 = new FindReplace("Cat cat cat", "cat", "wolf");
-      Assert.Equal(3, test3.CountWord());
+      FindReplace test4 = new FindReplace("Cat cat cat", "cat", "wolf");
+      Assert.Equal(3, test4.CountWord());
     }
+
+    [Fact]
+    public void Prevent_Partial_Replacements()
+    {
+      FindReplace test5 = new FindReplace("catdog", "cat", "wolf");
+      Assert.Equal("catdog", test5.WholeWordsOnly());
+    }
+
 
    //should also have test for capital letters and replacing numbers.
 
