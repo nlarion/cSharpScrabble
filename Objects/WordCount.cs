@@ -57,7 +57,7 @@ namespace FindReplaceNS.Objects
             {
               phraseSplit[i] = _newWord;
               string joinedList = string.Join(" ", phraseSplit.ToArray());
-              return joinedList;
+              newPhrase = joinedList;
             }
           }
          return newPhrase;
