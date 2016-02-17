@@ -27,8 +27,9 @@ namespace FindReplaceNS.Objects
         public int CountWord()
         {
           int times = 0;
+          string newPhrase = _phrase.ToLower();
 
-          List<string> phraseSplit = _phrase.Split(' ').ToList();
+          List<string> phraseSplit = newPhrase.Split(' ').ToList();
           for(var i = 0; i < phraseSplit.Count; i++)
           {
             if(phraseSplit[i] == _wordToReplace)
@@ -44,7 +45,7 @@ namespace FindReplaceNS.Objects
         {
           string newPhrase = _phrase.ToLower();
 
-          List<string> phraseSplit = _phrase.Split(' ').ToList();
+          List<string> phraseSplit = newPhrase.Split(' ').ToList();
           for (int i = 0; i < phraseSplit.Count; i++)
           {
 

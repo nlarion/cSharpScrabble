@@ -45,11 +45,17 @@ namespace FindReplaceTestNS
     [Fact]
     public void Prevent_Partial_Replacements_While_Allowing_Single()
     {
-      FindReplace test5 = new FindReplace("I am walking my cat to the cathedral", "cat", "wolf");
-      Assert.Equal("I am walking my wolf to the cathedral", test5.WholeWordsOnly());
+      FindReplace test6 = new FindReplace("I am walking my cat to the cathedral", "cat", "wolf");
+      Assert.Equal("i am walking my wolf to the cathedral", test6.WholeWordsOnly());
     }
 
    //need one more test to have CountWord() method count capitalized letters.
+   [Fact]
+   public void Find_Number_Of_Times_Word_Exists_And_Ignore_Caps()
+   {
+     FindReplace test7 = new FindReplace("Cat Cat Cat dog", "cat", "wolf");
+     Assert.Equal(3, test7.CountWord());
+   }
 
   }
 }
