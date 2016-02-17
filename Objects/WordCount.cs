@@ -17,6 +17,11 @@ namespace FindReplaceNS.Objects
           _newWord = newWord;
         }
 
+        public string GetWordToReplace()
+        {
+          return _wordToReplace;
+        }
+
         public string ReplaceWord()
         {
          string newPhrase = _phrase.ToLower();

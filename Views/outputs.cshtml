@@ -8,6 +8,14 @@
   <body>
     <div class="container">
       <h1>Your results of the phrase</h1>
+
+      @{
+        @Model.ReplaceWord();
+
+        <p>the word @Model.GetWordToReplace() was replaced @Model.CountWord() times</p>
+
+
+      }
     </div>
   </body>
 </html>
