@@ -1,13 +1,7 @@
-<h1>Test to see if your word is an anagram of any words on our list</h1>
+<h1>Enter your phrase and the word you'd like to search that phrase for</h1>
 
-<ul>
-@foreach(var word in Model)
-{
-  <li>@word</li>
-}
-</ul>
-
-<form action="/updatePage" method="post">
-<input name = "inputWord" placeholder = "Your Word Here"></input>
-<button>Click Me</button>
+<form action="/enterInputs" method="post">
+  <input name = "phraseInput" placeholder = "Phrase"></input>
+  <input name = "wordInput" placeholder = "Single Word"></input>
+  <button>How many times does my word appear?</button>
 </form>
