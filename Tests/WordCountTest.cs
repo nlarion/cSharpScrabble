@@ -38,8 +38,8 @@ namespace FindReplaceTestNS
     [Fact]
     public void Find_Number_Of_Times_Word_Exists()
     {
-      FindReplace test3 = new FindReplace("Cat cat", "cat", "wolf");
-      Assert.Equal(2, test3.CountWord());
+      FindReplace test3 = new FindReplace("Cat cat cat", "cat", "wolf");
+      Assert.Equal(3, test3.CountWord());
     }
 
    //should also have test for capital letters and replacing numbers.

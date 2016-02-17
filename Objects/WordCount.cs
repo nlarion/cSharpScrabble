@@ -26,7 +26,15 @@ namespace FindReplaceNS.Objects
 
         public int CountWord()
         {
-         return 0;
+        int times = 0;
+
+        List<string> phraseSplit = _phrase.Split(' ').ToList();
+        for(var i = 0; i < phraseSplit.Count; i++)
+        {
+          times ++;
+        }
+
+         return times;
         }
   }
 }
