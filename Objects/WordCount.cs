@@ -37,7 +37,6 @@ namespace FindReplaceNS.Objects
             times ++;
             }
           }
-
            return times;
           }
 
