@@ -31,7 +31,7 @@ namespace FindReplaceTestNS
     [Fact]
     public void Find_Number_Of_Times_Word_Exists()
     {
-      FindReplace test4 = new FindReplace("Cat cat cat", "cat", "wolf");
+      FindReplace test4 = new FindReplace("cat cat cat dog", "cat", "wolf");
       Assert.Equal(3, test4.CountWord());
     }
 
@@ -42,6 +42,12 @@ namespace FindReplaceTestNS
       Assert.Equal("catdog", test5.WholeWordsOnly());
     }
 
+    [Fact]
+    public void Prevent_Partial_Replacements_While_Allowing_Single()
+    {
+      FindReplace test5 = new FindReplace("cat dog", "cat", "wolf");
+      Assert.Equal("wolf dog", test5.WholeWordsOnly());
+    }
 
    //should also have test for capital letters and replacing numbers.
 

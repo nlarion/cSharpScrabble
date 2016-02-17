@@ -26,20 +26,38 @@ namespace FindReplaceNS.Objects
 
         public int CountWord()
         {
-        int times = 0;
+          int times = 0;
 
-        List<string> phraseSplit = _phrase.Split(' ').ToList();
-        for(var i = 0; i < phraseSplit.Count; i++)
-        {
-          times ++;
-        }
+          List<string> phraseSplit = _phrase.Split(' ').ToList();
+          for(var i = 0; i < phraseSplit.Count; i++)
+          {
+            if(phraseSplit[i] == _wordToReplace)
+            {
+            times ++;
+            }
+          }
 
-         return times;
-        }
+           return times;
+          }
 
         public string WholeWordsOnly()
         {
-          return "failure";
+          string newPhrase = _phrase.ToLower();
+
+          List<string> phraseSplit = _phrase.Split(' ').ToList();
+          for (int i = 0; i < phraseSplit.Count; i++)
+          {
+            Console.WriteLine(phraseSplit[i]);
+
+            if (phraseSplit[i] == _wordToReplace)
+            {
+              string bestPhrase = phraseSplit[i].Replace(_wordToReplace, _newWord);
+              return bestPhrase;
+              string joinedList = string.Join(" ", phraseSplit.ToArray());
+              return joinedList;
+            }
+          }
+         return newPhrase;
         }
   }
 }
