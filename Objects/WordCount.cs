@@ -7,6 +7,7 @@ namespace PalindromeNS.Objects
   public class Palindrome
     {
         private string _phrase;
+        private string _inversePhrase;
 
 
         public Palindrome (string phrase)
@@ -24,8 +25,23 @@ namespace PalindromeNS.Objects
 
           inversePhrase = string.Join("", reverse);
           Console.WriteLine(inversePhrase);
+          _inversePhrase = inversePhrase;
           return inversePhrase;
         }
+
+        public bool Compare()
+        {
+         if (_phrase == _inversePhrase)
+         {
+           return true;
+         }
+         else
+         {
+           return false;
+         }
+
+        }
+
 
 
   }
