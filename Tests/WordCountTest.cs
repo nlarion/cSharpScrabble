@@ -28,10 +28,14 @@ namespace PalindromeTestNS
       Palindrome test = new Palindrome("bob");
       test.Reverse();
       Assert.Equal(true, test.Compare());
-
     }
 
-
-
+    [Fact]
+    public void Reverse_The_Sentence_Then_Compare_Original_true()
+    {
+      Palindrome test = new Palindrome("race car");
+      test.Reverse();
+      Assert.Equal(true, test.Compare());
+    }
   }
 }

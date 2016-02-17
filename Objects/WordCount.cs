@@ -13,7 +13,6 @@ namespace PalindromeNS.Objects
         public Palindrome (string phrase)
         {
           _phrase = phrase;
-
         }
 
         public string Reverse()
@@ -26,6 +25,8 @@ namespace PalindromeNS.Objects
           inversePhrase = string.Join("", reverse);
           Console.WriteLine(inversePhrase);
           _inversePhrase = inversePhrase;
+          _phrase = _phrase.Replace(" ", "");
+          _inversePhrase = _inversePhrase.Replace(" ",  "");
           return inversePhrase;
         }
 
