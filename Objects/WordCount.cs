@@ -47,12 +47,10 @@ namespace FindReplaceNS.Objects
           List<string> phraseSplit = _phrase.Split(' ').ToList();
           for (int i = 0; i < phraseSplit.Count; i++)
           {
-            Console.WriteLine(phraseSplit[i]);
 
             if (phraseSplit[i] == _wordToReplace)
             {
-              string bestPhrase = phraseSplit[i].Replace(_wordToReplace, _newWord);
-              return bestPhrase;
+              phraseSplit[i] = _newWord;
               string joinedList = string.Join(" ", phraseSplit.ToArray());
               return joinedList;
             }
