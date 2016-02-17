@@ -2,65 +2,25 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace FindReplaceNS.Objects
+namespace PalindromeNS.Objects
 {
-  public class FindReplace
+  public class Palindrome
     {
         private string _phrase;
-        private string _wordToReplace;
-        private string _newWord;
 
-        public FindReplace (string phrase, string wordToReplace, string newWord)
+
+        public Palindrome (string phrase)
         {
           _phrase = phrase;
-          _wordToReplace = wordToReplace;
-          _newWord = newWord;
+
         }
 
-        public string GetWordToReplace()
+        public string Reverse()
         {
-          return _wordToReplace;
+          string inversePhrase;
+          return "failure";
         }
 
-        public string ReplaceWord()
-        {
-         string newPhrase = _phrase.ToLower();
-         string result = newPhrase.Replace(_wordToReplace, _newWord);
-         return result;
-        }
 
-        public int CountWord()
-        {
-          int times = 0;
-          string newPhrase = _phrase.ToLower();
-
-          List<string> phraseSplit = newPhrase.Split(' ').ToList();
-          for(var i = 0; i < phraseSplit.Count; i++)
-          {
-            if(phraseSplit[i] == _wordToReplace)
-            {
-            times ++;
-            }
-          }
-           return times;
-          }
-
-        public string WholeWordsOnly()
-        {
-          string newPhrase = _phrase.ToLower();
-
-          List<string> phraseSplit = newPhrase.Split(' ').ToList();
-          for (int i = 0; i < phraseSplit.Count; i++)
-          {
-
-            if (phraseSplit[i] == _wordToReplace)
-            {
-              phraseSplit[i] = _newWord;
-              string joinedList = string.Join(" ", phraseSplit.ToArray());
-              newPhrase = joinedList;
-            }
-          }
-         return newPhrase;
-        }
   }
 }
